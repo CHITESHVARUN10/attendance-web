@@ -4,6 +4,7 @@ const geolib = require('geolib');
 const mysql = require('mysql2');
 const axios = require('axios');
 
+
 // Set up MySQL connection
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
@@ -12,6 +13,8 @@ const db = mysql.createConnection({
     database: "sql12718865",
     port: process.env.DB_PORT
 });
+
+
 
 router.post('/data', async (req, res) => {
     try {

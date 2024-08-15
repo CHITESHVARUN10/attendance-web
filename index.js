@@ -155,7 +155,7 @@ app.get('/home', isAuthenticated, (req, res) => {
                 res.status(500).send('Server Error');
                 return;
             }
-            const onlineUsers = onlineUsersResults[0].count - 1;
+            const onlineUsers = onlineUsersResults[0].count;
 
             db.query(offlineUsersQuery, (err, offUsersResults) => {
                 if (err) {
